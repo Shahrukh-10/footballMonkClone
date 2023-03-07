@@ -1,0 +1,92 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+  .stickyNavbar {
+      width: 100%;
+      height: 46px;
+      background-color: var(--black-bg-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+  }
+
+  .fixed {
+      position: fixed;
+      top: 0;
+  }
+
+  .introHeading p {
+      color: white;
+      font-style: italic;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.2rem;
+  }
+
+  .list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-items: center;
+  }
+
+  .listElement {
+      color: white;
+      padding: 0 30px;
+      font-size: .9rem;
+      font-weight: 500;
+  }
+
+  .navList {
+      display: flex;
+      justify-self: center;
+      height: auto;
+      width: fit-content;
+  }
+
+  /* Responsive */
+
+  .listResponsive {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-items: center;
+  }
+
+  .listResponsive li {
+      padding: 0 20px;
+      font-size: .9rem;
+      font-weight: 500;
+  }
+
+  @media screen and (max-width: 982px) {
+      .listResponsive li {
+          padding: 0 10px;
+          font-size: .9rem;
+          font-weight: 500;
+      }
+  }
+
+  @media screen and (max-width: 861px) {
+      .navList {
+          display: none;
+      }
+
+      .stickyNavbar {
+          height: 4.5rem;
+      }
+
+      .introHeading p {
+          font-weight: 900;
+          font-size: 5vw;
+      }
+
+      .fixed {
+          position: relative;
+      }
+  }
+
+  /* TYPEWRITER */
+
+  #typewriter {
+      font-family: 'Montserrat', sans-serif;
+  }

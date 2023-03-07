@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@200;600;900&display=swap');
+
+.grpahicTshirts {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.graphicHeading {
+    color: #192028;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.paradiv p{
+    font-size: 18px;
+    font-family: 'Raleway';
+    font-weight: 500;
+}
+.border {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 13rem;
+    background-color: var(--main-bg-color);
+}
+
+.paragraph {
+    color: #192028;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    font-style: italic;
+    letter-spacing: 5.5px;
+    padding: 10px 5px;
+}
+
+.listTshirts{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 17vw;
+    flex-wrap: wrap;
+}
+
+/* Tshirt Component */
+.tshirtDisplay{
+    width: 16vw;
+    height: 26rem;
+}
+.image,.jerseyImage{
+    width: auto;
+}
+
+
+.image img:hover {
+
+    animation: bounceShirt 1.3s infinite linear;
+}
+
+.image,.jerseyImage img {
+    border-radius: 2px;
+}
+.jerseyImage :hover{
+    transition: all;
+    transition-duration: .5s;
+    transform: scale(1.1);
+}
+
+@keyframes bounceShirt {
+
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-2%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+.buynow{
+    background-color: var(--main-bg-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Raleway';
+    font-weight: 600;
+}
+
+@media screen and (max-width:1440px) {
+    .tshirtDisplay{
+        height: 22rem;
+    }
+}
+@media screen and (max-width:1128px) {
+    .tshirtDisplay{
+        width: 10.9rem;
+        height: 19rem;
+    }
+}
+@media screen and (max-width:550px) {
+    .tshirtDisplay{
+        width: auto;
+        height: max-content;
+        padding: 10px 0pc;
+    }
+    .buynow{
+        margin-bottom: 18px;
+    }
+    .paradiv{
+        padding-top: 13px;
+    }
+    .buynow{
+        padding: 3px 6px;
+        font-size: smaller;
+    }
+}

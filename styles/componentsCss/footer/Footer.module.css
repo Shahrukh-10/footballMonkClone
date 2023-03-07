@@ -1,0 +1,186 @@
+.footer {
+    width: 100%;
+    height: max-content;
+    padding: 30px 17vw;
+    background-color: #192028;
+    color: white;
+
+}
+
+.mainFooterContent {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info h2,
+.shopby h2,
+.socials h2 {
+    font-weight: bold;
+    font-size: 1.1vw;
+    font-family: 'Raleway';
+    cursor: default;
+    padding-bottom: 20px;
+}
+
+.logo img {
+    width: 16vw;
+}
+
+.info p,
+.shopby p,
+.socials p {
+    font-weight: lighter;
+    font-size: .9vw;
+    padding: 10px 0;
+    font-family: 'Raleway';
+    cursor: pointer;
+}
+
+.icons {
+    margin-right: 10px;
+}
+
+.socialIcons button:hover {
+    transition: all;
+    transition-duration: .7s;
+    transform: scale(1.1);
+}
+
+.subscribeInput {
+    margin-top: 20px;
+
+}
+
+.subscribeInput input {
+    position: relative;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    color: black;
+    background-color: #fff;
+    padding-left: 50px;
+
+    width: auto;
+}
+
+.subscribeInput input::placeholder {
+    color: grey;
+    padding-left: 50px;
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: large;
+    letter-spacing: 1.5px;
+}
+
+.subscribeInput {
+    position: relative;
+
+}
+
+.search {
+    position: absolute;
+    top: 6px;
+    left: 15px;
+}
+
+.searchicon {
+    width: 20px;
+
+}
+
+.paymentForms {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:1136px) {
+    .subscribeInput {
+        margin-top: 20px;
+    }
+
+    .subscribeInput input {
+        width: 14rem;
+    }
+
+    .subscribeInput input::placeholder {
+        padding-left: 0px;
+    }
+
+    .info h2,
+    .shopby h2,
+    .socials h2 {
+        font-size: 16px;
+    }
+
+    .info p,
+    .shopby p,
+    .socials p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:1136px) {
+    .subscribeInput {
+        margin-top: 20px;
+        height: 30px;
+    }
+
+    .subscribeInput input {
+        width: 14rem;
+    }
+
+    .subscribeInput input::placeholder {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width:862px) {
+    .footer {
+        padding: 0;
+    }
+
+    .mainFooterContent {
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+
+    .subscribeInput {
+        margin-top: 0px;
+    }
+
+    .subscribeInput input {
+        width: 10rem;
+        height: 20px;
+    }
+    .socials{
+        padding-left: 20px;
+    }
+
+    .search {
+        top: -2px;
+        left: 12px;
+    }
+
+    .searchicon {
+        width: 12px;
+    }
+
+    .subscribeInput input::placeholder {
+        padding-left: 0px;
+        font-size: small;
+    }
+
+    .icons {
+        width: 20px;
+    }
+
+    .paymentForms {
+        padding: 20px 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+}

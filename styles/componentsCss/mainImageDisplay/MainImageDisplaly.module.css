@@ -1,0 +1,76 @@
+.mainImageDisplay {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.mainImage {
+    width: 100%;
+    min-height: 450px;
+    object-fit: cover;
+}
+
+.freeServices {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.service1,
+.service2,
+.service3 {
+    width: 100%;
+    height: 144.375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.paragraph {
+    font-weight: 200;
+    font-size: large;
+    text-align: center;
+}
+
+.service1 {
+    background-color: #390099;
+
+}
+
+.service2 {
+    background-color: #ff0035;
+}
+
+.service3 {
+    background-color: #ffa400;
+}
+
+@media screen and (max-width:1000px) {
+    .freeServices {
+        flex-direction: column;
+    }
+
+    .service1,
+    .service2,
+    .service3 {
+        height: 100px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+    }
+
+    .icons {
+        width: 24px;
+    }
+
+    .icon {
+        width: 30px;
+    }
+}
