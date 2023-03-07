@@ -52,86 +52,83 @@ const Navbar = () => {
       dispatch(OPEN_SEARCH());
     }
   };
-  console.log(windowWidth);
   return (
-    <>
-      {isClient &&
-        (windowWidth >= 862 ? (
-          <div className={`${styles.navbar}`}>
-            <Image
-              className={styles.logoImage}
-              src="/logo.png"
-              alt="Logo image"
-              priority={true}
-              quality={100}
-              width={500}
-              height={500}
-            />
-            <div className={`${styles.searchContainer} flex`}>
-              <input
-                className={`${styles.searchInput} rounded-sm`}
-                placeholder="Search.."
-                type="text"
-              />
-              <div className={`${styles.searchButton}`}>
-                <button>
-                  <BiSearchAlt2 color="black" size={25} />
-                </button>
-              </div>
-            </div>
-            <div className={`${styles.userContainer} `}>
-              <Link href="/cart">
-                <button className={styles.profileIcon}>
-                  <RiShoppingBag2Fill
-                    className={`cursor-pointer ${styles.icon}`}
-                    color="black"
-                    size={30}
-                  />
-                </button>
-              </Link>
-              <Link href="/account">
-                <button>
-                  <FaUser
-                    className={`cursor-pointer ${styles.icon}`}
-                    color="black"
-                    size={30}
-                  />
-                </button>
-              </Link>
-            </div>
-          </div>
-        ) : (
-          <div className={`${styles.smallNavbar}`}>
-            <Search openSearch={openSearch} />
-            <button onClick={() => handleNavigation()}>
-              {openNavigation ? (
-                <RxCross2 color="black" size={25} />
-              ) : (
-                <FiMenu color="black" size={25} />
-              )}
-              <NavMenu openNavigation={openNavigation} />
-            </button>
-            <button onClick={() => handleSearch()}>
-              <BiSearchAlt2 color="black" size={30} />
-            </button>
-            <Image
-              className={styles.logoImageCenter}
-              src="/logo.png"
-              alt="Logo image"
-              priority={true}
-              quality={100}
-              width={500}
-              height={500}
-            />
-            <button className={styles.profileIcon}>
-              <RiShoppingBag2Fill color="black" size={25} />
-            </button>
+    <div>
+      <div className={`${styles.navbar}`}>
+        <Image
+          className={styles.logoImage}
+          src="/logo.png"
+          alt="Logo image"
+          priority={true}
+          quality={100}
+          width={500}
+          height={500}
+        />
+        <div className={`${styles.searchContainer} flex`}>
+          <input
+            className={`${styles.searchInput} rounded-sm`}
+            placeholder="Search.."
+            type="text"
+          />
+          <div className={`${styles.searchButton}`}>
             <button>
-              <FaUser color="black" size={25} />
+              <BiSearchAlt2 color="black" size={25} />
             </button>
           </div>
-        ))}
-    </>
+        </div>
+        <div className={`${styles.userContainer} `}>
+          <Link href="/cart">
+            <button className={styles.profileIcon}>
+              <RiShoppingBag2Fill
+                className={`cursor-pointer ${styles.icon}`}
+                color="black"
+                size={30}
+              />
+            </button>
+          </Link>
+          <Link href="/account">
+            <button>
+              <FaUser
+                className={`cursor-pointer ${styles.icon}`}
+                color="black"
+                size={30}
+              />
+            </button>
+          </Link>
+        </div>
+      </div>
+      <div>
+        <div className={`${styles.smallNavbar}`}>
+          <Search openSearch={openSearch} />
+          <button onClick={() => handleNavigation()}>
+            {openNavigation ? (
+              <RxCross2 color="black" size={25} />
+            ) : (
+              <FiMenu color="black" size={25} />
+            )}
+            <NavMenu openNavigation={openNavigation} />
+          </button>
+          <button onClick={() => handleSearch()}>
+            <BiSearchAlt2 color="black" size={30} />
+          </button>
+          <Image
+            className={styles.logoImageCenter}
+            src="/logo.png"
+            alt="Logo image"
+            priority={true}
+            quality={100}
+            width={500}
+            height={500}
+          />
+          <button className={styles.profileIcon}>
+            <RiShoppingBag2Fill color="black" size={25} />
+          </button>
+          <button>
+            <FaUser color="black" size={25} />
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

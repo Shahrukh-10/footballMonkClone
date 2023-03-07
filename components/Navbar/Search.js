@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 const Search = () => {
   const { openSearch } = useSelector((state) => state.navbar);
   const dispatch = useDispatch();
-  console.log(openSearch);
   const searchBoxVariants = {
     hidden: {
       opacity: 0,
