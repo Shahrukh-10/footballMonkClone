@@ -123,3 +123,14 @@
     text-align: center;
     font-size: 60px
 }
+.smallNavbar{
+    display: none;
+}
+@media screen and (max-width:862px) {
+    .navbar{
+        display: none;
+    }
+    .smallNavbar{
+        display: flex;
+    }
+}
