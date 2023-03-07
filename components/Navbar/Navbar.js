@@ -52,7 +52,7 @@ const Navbar = () => {
       dispatch(OPEN_SEARCH());
     }
   };
-
+  console.log(windowWidth);
   return (
     <>
       {isClient && windowWidth >= 862 ? (
