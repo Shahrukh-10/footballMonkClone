@@ -8,7 +8,6 @@ const Cart = () => {
 
   return (
     <>
-      {screenWidth > 580 ? (
         <div className={styles.cart}>
           <CartElement />
           <CartElement />
@@ -16,7 +15,6 @@ const Cart = () => {
           <CartElement />
           <CartElement />
         </div>
-      ) : (
         <div className={styles.responsiveCart}>
           <ResponiveCart />
           <ResponiveCart />
@@ -24,7 +22,6 @@ const Cart = () => {
           <ResponiveCart />
           <ResponiveCart />
         </div>
-      )}
     </>
   );
 };

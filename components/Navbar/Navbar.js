@@ -55,15 +55,17 @@ const Navbar = () => {
   return (
     <div>
       <div className={`${styles.navbar}`}>
-        <Image
-          className={styles.logoImage}
-          src="/logo.png"
-          alt="Logo image"
-          priority={true}
-          quality={100}
-          width={500}
-          height={500}
-        />
+        <Link href={"/"}>
+          <Image
+            className={styles.logoImage}
+            src="/logo.png"
+            alt="Logo image"
+            priority={true}
+            quality={100}
+            width={500}
+            height={500}
+          />
+        </Link>
         <div className={`${styles.searchContainer} flex`}>
           <input
             className={`${styles.searchInput} rounded-sm`}
@@ -111,21 +113,27 @@ const Navbar = () => {
           <button onClick={() => handleSearch()}>
             <BiSearchAlt2 color="black" size={30} />
           </button>
-          <Image
-            className={styles.logoImageCenter}
-            src="/logo.png"
-            alt="Logo image"
-            priority={true}
-            quality={100}
-            width={500}
-            height={500}
-          />
+          <Link href="/">
+            <Image
+              className={styles.logoImageCenter}
+              src="/logo.png"
+              alt="Logo image"
+              priority={true}
+              quality={100}
+              width={500}
+              height={500}
+            />
+          </Link>
           <button className={styles.profileIcon}>
-            <RiShoppingBag2Fill color="black" size={25} />
+            <Link href="/cart">
+              <RiShoppingBag2Fill color="black" size={25} />
+            </Link>
           </button>
-          <button>
-            <FaUser color="black" size={25} />
-          </button>
+          <Link href="/account">
+            <button>
+              <FaUser color="black" size={25} />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
