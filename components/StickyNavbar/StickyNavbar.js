@@ -26,7 +26,7 @@ const StickyNavbar = () => {
     );
   };
 
-  if (screenWidth < 1400 && screenWidth >= 862) {
+  if (screenWidth >= 862) {
     return (
       <>
         <div
@@ -53,7 +53,7 @@ const StickyNavbar = () => {
   return (
     <>
       <div
-        className={`${styles.stickyNavbar} ${scrollY > 183.49 && styles.fixed}`}
+        className={`${styles.stickyNavbar}  ${scrollY > 183.49 && styles.fixed}`}
       >
         <div className={`${styles.introHeading}`}>
           {screenWidth > 861 ? (

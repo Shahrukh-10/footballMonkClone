@@ -55,7 +55,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: white;
-    position: sticky;
+    position: fixed;
     z-index: 3;
     top: 0;
     width: 100%;

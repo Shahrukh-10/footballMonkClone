@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../../styles/componentsCss/GraphicTshirts/GraphicTshirts.module.css";
 
 const TshirtDisplay = () => {
@@ -12,7 +13,7 @@ const TshirtDisplay = () => {
       </div>
       <div className={`name pt-5 ${styles.paradiv}`}>
         <p className={`pb-2 `}>Uefa tshirt ronaldo</p>
-      <button className={styles.buynow}>Buy Now</button>
+        <Link href="/product/prodName"><button className={styles.buynow}>Buy Now</button></Link>
       </div>
     </div>
   );

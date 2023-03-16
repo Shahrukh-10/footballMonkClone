@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+.product {
+    width: 100%;
+    padding: 20px 17vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--black-bg-color);
+}
+
+.productPage {
+    width: 100%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    margin-bottom: 3rem;
+}
+.productImage {
+    position: relative;
+    height: auto;
+    margin-right: 30px;
+}
+
+.productImage img {
+    border-radius: 5px;
+    min-width: 250px;
+}
+
+.imageOpen{
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.781);
+}
+.imageOpen img{
+    border-radius: 4px;
+}
+
+.searchBlock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 8px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.productDescreption{
+    min-width: none;
+}
+
+.heading h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 1px solid gainsboro;
+}
+.headingSmall h1{
+    display: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.paragraphDescreption {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    padding-bottom: 14px;
+    font-weight: bold;
+}
+
+.socialIconList {
+    display: flex;
+    margin-bottom: 14px;
+}
+
+.price {
+    display: flex;
+    margin-top: 14px;
+}
+
+.fakePrice {
+    color: var(--main-bg-color);
+    text-decoration: line-through;
+    font-weight: 500;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.orignalPrice {
+    font-weight: 500;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.siteDeliveryDescreption {
+    color: var(--main-bg-color);
+    border-radius: 3px;
+    padding: 1px 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+    justify-content: left;
+    align-items: center;
+    background-color: gainsboro;
+    margin-top: 10px;
+    padding: 5px 5px;
+    margin-bottom: 40px;
+}
+
+.freeShipping {
+    font-size: 13px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.materialDescreption h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.materialDescreption p {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.materialBlockPara {
+    height: auto;
+    background-color: var(--black-bg-color);
+    color: white;
+    padding: 7px 10px;
+    border-radius: 3px;
+
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.deliveryDetails p {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.size,
+.sizeBlock {
+    display: flex;
+}
+
+.size {
+    margin-bottom: 20px;
+}
+
+.blocks {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px gainsboro;
+    color: black;
+}
+
+.size h1 {
+    padding-right: 20px;
+    font-size: 18px;
+}
+
+.quantityBlock {
+    display: flex;
+    margin-right: 40px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 30px;
+}
+
+.blockDecrease,
+.blockQuantity,
+.blockIncrease {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockDecrease {
+    border-right: none;
+}
+
+.blockIncrease {
+    border-left: none;
+}
+
+.addToCart button {
+    width: 9rem;
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: 2.5rem;
+    color: white;
+    letter-spacing: 1.6px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    background-color: var(--main-bg-color);
+}
+
+.addToCart button:hover {
+    box-shadow: 0 0 20px var(--main-bg-color);
+}
+
+/* fc6704 */
+.deliveryFeatures {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+.dFeatureBlock {
+    margin-right: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dFeatureBlock p {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.deliveryFeatures {
+    display: flex;
+}
+
+.sizeSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+}
+
+.descreption,
+.reviews {
+    color: var(--black-bg-color);
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    width: 50%;
+    font-size: large;
+    height: 4rem;
+    cursor: pointer;
+}
+
+.descreption:hover,
+.reviews:hover {
+    background-color: var(--black-bg-color);
+    color: var(--main-bg-color);
+}
+
+.sizeDisplay {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sizeDisplay p {
+    margin-bottom: 20px;
+}
+
+.sizeChartOpen {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    /* width: 70%; */
+    width: 100%;
+    z-index: 3;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.cross {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 4;
+}
+
+.sizeChart {
+    width: 70%;
+}
+
+.block {
+    display: none;
+}
+
+.reviewDisplay {
+    margin-top: 30px;
+    display: flex;
+    height: 339px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:1184px) {
+    .product{
+        padding: 20px 2vw;
+    }
+
+}
+@media screen and (max-width:800px) {
+    .product{
+        padding: 20px 20px;
+    }
+    .productPage{
+        flex-direction: column;
+    }
+    .heading h1{
+        display: none;
+    }
+    .headingSmall h1{
+        display: block;
+        padding-top: 30px;
+    }
+    .productImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        margin: 0;
+    }
+    .searchBlock{
+        top: 45px;
+        background-color: gainsboro;
+    }
+}
+@media screen and (max-width:454px) {
+
+    .product{
+        padding: 5px 10px
+    }
+    .searchBlock{
+        right: 25px;
+    }
+    .headingSmall h1{
+        font-size: x-large;
+    }
+    .siteDeliveryDescreption{
+        font-size: 12px;
+    }
+    .materialDescreption h1{
+        font-size: large;
+    }
+    .materialDescreption p{
+        font-size: 13px;
+    }
+
+    .icon{
+        width: 50px;
+        height: 50px;
+    }
+    .dFeatureBlock p{
+        font-size: 10px;
+    }
+
+    .sizeSection p{
+        font-size: 14px;
+    }
+    
+    .sizeDisplay p{
+        font-size: 12px;
+    }
+    .reviewDisplay{
+        font-size: 12px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .sizeChart{
+        width: 85%;
+    }
+}

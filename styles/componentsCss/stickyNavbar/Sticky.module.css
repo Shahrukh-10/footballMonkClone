@@ -5,6 +5,7 @@
       height: 46px;
       background-color: var(--black-bg-color);
       display: flex;
+      z-index: 2;
       align-items: center;
       justify-content: space-evenly;
   }
@@ -73,6 +74,7 @@
 
       .stickyNavbar {
           height: 4.5rem;
+          margin-top: 17vw;
       }
 
       .introHeading p {
@@ -83,6 +85,9 @@
       .fixed {
           position: relative;
       }
+  }
+  .stickyNavbarMarginTop{
+margin-top: 0;
   }
 
   /* TYPEWRITER */
