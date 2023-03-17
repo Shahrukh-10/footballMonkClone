@@ -1,6 +1,7 @@
 import styles from "../../styles/componentsCss/navbar/Navbar.module.css";
 import { motion } from "framer-motion";
 import {  useSelector } from "react-redux";
+import Link from "next/link";
 
 const NavMenu = () => {
   const {openNavigation} = useSelector((state) => state.navbar);
@@ -25,13 +26,13 @@ const NavMenu = () => {
         initial="hidden"
       >
         <ul className={styles.list}>
-          <li className={styles.listElement}>Home</li>
-          <li className={styles.listElement}>Football Jerseys</li>
-          <li className={styles.listElement}>Graphic Tshirts</li>
-          <li className={styles.listElement}>Season 22/23</li>
-          <li className={styles.listElement}>Season 21/22</li>
-          <li className={styles.listElement}>Customized Jerseys</li>
-          <li className={styles.listElement}>International Jerseys</li>
+          <li className={styles.listElement}><Link href="/product-category/sa">Home</Link></li>
+          <li className={styles.listElement}><Link href="/product-category/sa">Football Jerseys</Link></li>
+          <li className={styles.listElement}><Link href="/product-category/sa">Graphic Tshirts</Link></li>
+          <li className={styles.listElement}><Link href="/product-category/sa">Season 22</Link>/23</li>
+          <li className={styles.listElement}><Link href="/product-category/sa">Season 21</Link>/22</li>
+          <li className={styles.listElement}><Link href="/product-category/sa">Customized Jerseys</Link></li>
+          <li className={styles.listElement}><Link href="/product-category/sa">International Jerseys</Link></li>
         </ul>
       </motion.div>
   );
