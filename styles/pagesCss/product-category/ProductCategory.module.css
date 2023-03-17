@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+.productCategory{
+    width: 100%;
+    padding: 20px 17vw;
+}
+
+.mainImage img{
+    width: 100%;
+    border-radius: 4px;
+}
+.scrollListCategory{
+    margin: 20px 0;
+}
+.scrollList{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+}
+.scrollListItem p{
+    white-space: nowrap;
+}
+.scrollListItem{
+    margin-right: 4px;
+    padding: 0px 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+    border-radius: 16px;
+}
+.scrollListItem:hover{
+    background-color: var(--main-bg-color);
+    color: white;
+    box-shadow: 0 0 8px var(--main-bg-color);
+}
+.listAccountPage li {
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
+}
+
+.listAccountPage h1 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--main-bg-color);
+}
+.productDisplay{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    flex: 1;
+}
+.right{
+    flex: 4;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.image{
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    width: 209px;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px gainsboro;
+}
+.image img{
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+    width: 100%;
+}
+.sale{
+    position: absolute;
+    left: 8%;
+    top: 4%;
+    width: 2.4rem;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.1rem;
+    border-radius: 4px;
+    background-color: var(--main-bg-color);
+    animation: colorChange 3s linear infinite;
+}
+@keyframes colorChange {
+    0% {
+        color: white;
+    }
+    25% {
+        color: greenyellow;
+    }
+    75%{
+        color: black;
+    }
+    100%{
+        color: white;
+    }
+}
+.productDetail{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    padding-top: 20px;
+}
+.price{
+    width: 70%;
+    display: flex;
+    font-size: larger;
+    font-weight: 500;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+}
+.fakePrice{
+    font-family: sans-serif;
+    color: var(--main-bg-color);
+    text-decoration: line-through;
+}
+
+@media screen and (max-width:1242px) {
+    .productCategory{
+        padding-left: 2vw;
+        padding-right: 2vw;
+
+    }
+}
+@media screen and (max-width:862px) {
+    .left{
+    display: none;
+    }
+    .image{
+        width: 30%;
+        min-width: 200px
+    }
+}
+@media screen and (max-width:646px) {
+    .right{
+        justify-content: space-evenly;
+    }
+    .image{
+        width: 45%;
+    }
+}
+@media screen and (max-width:438px) {
+    .right{
+        justify-content: space-between;
+        padding: 0;
+    }
+    .image{
+        min-width: 48%;
+    }
+}
