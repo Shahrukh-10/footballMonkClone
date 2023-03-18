@@ -3,7 +3,7 @@ import { MdOutlineCancel } from "react-icons/md";
 
 const CartElement = () => {
   return (
-    <div className="py-10">
+    <div className="py-5">
       <div className={styles.heading}>
         <ul className={styles.headingList}>
           <li>Product</li>

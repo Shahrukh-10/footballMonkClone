@@ -12,10 +12,22 @@
 .scrollListCategory{
     margin: 20px 0;
 }
+.scrollList::-webkit-scrollbar {
+    display: none;
+}
 .scrollList{
     display: flex;
     justify-content: space-between;
     overflow-x: scroll;
+}
+.category{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    text-shadow: -3px 1px 4px rgb(25 32 40 / 23%);
+    text-transform: capitalize;
 }
 .scrollListItem p{
     white-space: nowrap;
@@ -134,6 +146,24 @@
     color: var(--main-bg-color);
     text-decoration: line-through;
 }
+.loadMoreButton{
+    width: 100%;
+    text-align: right;
+    padding-right: 8px;
+    margin-top: 10px;
+}
+
+.loadMore{
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: var(--main-bg-color);
+    color: white;
+    font-size: small;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+
 
 @media screen and (max-width:1242px) {
     .productCategory{
@@ -150,6 +180,9 @@
         width: 30%;
         min-width: 200px
     }
+    .category{
+        font-size: 35px;
+    }
 }
 @media screen and (max-width:646px) {
     .right{
@@ -157,6 +190,9 @@
     }
     .image{
         width: 45%;
+    }
+     .category{
+        font-size: 30px;
     }
 }
 @media screen and (max-width:438px) {
@@ -166,5 +202,11 @@
     }
     .image{
         min-width: 48%;
+    }
+     .category{
+        font-size: 25px;
+    }
+    .loadMoreButton{
+        padding: 0;
     }
 }

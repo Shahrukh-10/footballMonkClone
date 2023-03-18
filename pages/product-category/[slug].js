@@ -4,33 +4,34 @@ import styles from "../../styles/pagesCss/product-category/ProductCategory.modul
 
 const SlugProductCategory = () => {
   const router = useRouter();
-  console.log(router.query.slug);
+  const category = router.query.slug;
 
   const ProductCategoryImage = () => {
     return (
-
-
       <div className={styles.image}>
-        <Link href="/product/sa"><img
-          src="https://footballmonk.in/wp-content/uploads/2023/01/Argentina-World-Champions-Graphic-Hoodie-Black.jpg"
-          alt="ProductImage"
-        />
+        <Link href="/product/sa">
+          <img
+            src="https://footballmonk.in/wp-content/uploads/2023/01/Argentina-World-Champions-Graphic-Hoodie-Black.jpg"
+            alt="ProductImage"
+          />
         </Link>
-        <p className={`px-3 ${styles.productDetail}`}>Argentina worldcup hoodie</p>
+        <p className={`px-3 ${styles.productDetail}`}>
+          Argentina worldcup hoodie
+        </p>
         <div className={styles.price}>
           <p className={styles.fakePrice}>₹1299</p>
           <p className={styles.realPrice}>₹999</p>
         </div>
         <div className={styles.sale}>
-            <p>SALE</p>
+          <p>SALE</p>
         </div>
       </div>
-
     );
   };
 
   return (
     <div className={styles.productCategory}>
+      <h1 className={styles.category}>Product Category</h1>
       <div className={styles.mainImage}>
         <img
           src="https://footballmonk.in/wp-content/uploads/2019/06/Graphic-tee-banner-category.jpg"
@@ -112,6 +113,9 @@ const SlugProductCategory = () => {
           <ProductCategoryImage />
           <ProductCategoryImage />
         </div>
+      </div>
+      <div className={styles.loadMoreButton}>
+        <button className={styles.loadMore}>Load More</button>
       </div>
     </div>
   );

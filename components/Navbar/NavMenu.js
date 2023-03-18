@@ -25,7 +25,7 @@ const NavMenu = () => {
         animate={openNavigation ? "visible" : "hidden"}
         initial="hidden"
       >
-        <ul className={styles.list}>
+       <ul className={styles.list}>
           <li className={styles.listElement}><Link href="/product-category/sa">Home</Link></li>
           <li className={styles.listElement}><Link href="/product-category/sa">Football Jerseys</Link></li>
           <li className={styles.listElement}><Link href="/product-category/sa">Graphic Tshirts</Link></li>
@@ -33,7 +33,7 @@ const NavMenu = () => {
           <li className={styles.listElement}><Link href="/product-category/sa">Season 21</Link>/22</li>
           <li className={styles.listElement}><Link href="/product-category/sa">Customized Jerseys</Link></li>
           <li className={styles.listElement}><Link href="/product-category/sa">International Jerseys</Link></li>
-        </ul>
+       </ul>
       </motion.div>
   );
 };

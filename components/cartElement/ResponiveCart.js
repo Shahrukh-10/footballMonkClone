@@ -38,10 +38,10 @@ const ResponiveCart = () => {
       <div className={styles.coupounSectionr}>
         <div className={styles.inputr}>
           <input type="text" placeholder="Coupoun" />
-          <button className={styles.cartButtonr}>Apply Coupoun</button>
-        </div>
-        <div className="my-4">
+          <div className={styles.cartButtons}>
+          <button className={`${styles.cartButtonr} ${styles.coupoun}`}>Apply Coupoun</button>
           <button className={`${styles.cartButtonr} `}>Update Cart</button>
+          </div>
         </div>
       </div>
 
