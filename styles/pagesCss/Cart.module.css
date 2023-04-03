@@ -82,6 +82,7 @@
 .block1,
 .block3 {
     border: 1px solid grey;
+    cursor: pointer;
 }
 
 .block2 {
@@ -212,7 +213,7 @@
     .block3 {
         width: 15px;
         height: 15px;
-
+        cursor: pointer;
     }
 
     .itemUl {
@@ -303,6 +304,7 @@
 .block3r {
     border-left: 1px solid gainsboro;
     border-right: 1px solid gainsboro;
+    cursor: pointer;
 
 }
 

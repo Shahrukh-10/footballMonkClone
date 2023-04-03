@@ -10,6 +10,12 @@
     color: var(--black-bg-color);
 }
 
+.active{
+    background-color: var(--main-bg-color);
+    color: white;
+    margin-right: 100px;
+}
+
 .productPage {
     width: 100%;
     display: flex;
@@ -181,6 +187,7 @@
 .blocks {
     width: 2rem;
     height: 2rem;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,6 +196,12 @@
     border-radius: 3px;
     box-shadow: 1px 1px 1px gainsboro;
     color: black;
+}
+
+
+.active{
+    background-color: var(--main-bg-color);
+    color: white;
 }
 
 .size h1 {
@@ -222,9 +235,11 @@
 
 .blockDecrease {
     border-right: none;
+    cursor: pointer;
 }
 
 .blockIncrease {
+    cursor: pointer;
     border-left: none;
 }
 

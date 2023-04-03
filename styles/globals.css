@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --main-bg-color : #FB5828;
-    --black-bg-color : #192028;
+:root {
+    --main-bg-color: #FB5828;
+    --black-bg-color: #192028;
+      user-select: none;
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;

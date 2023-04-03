@@ -19,6 +19,14 @@
     border: none;
     background-color: rgb(243, 242, 242);
     padding-left: 10px;
+    outline: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.searchInput:focus {
+    border: .1pt solid rgba(0, 0, 255, 0.014);
+    background-color: rgba(0, 0, 255, 0.041);
 }
 
 .searchInput::placeholder {
@@ -39,10 +47,11 @@
     padding: 12px 22px;
 }
 
-.userContainer button{
+.userContainer button {
     cursor: pointer;
 }
-.icon :hover{
+
+.icon :hover {
     color: var(--main-bg-color);
 }
 
@@ -123,14 +132,17 @@
     text-align: center;
     font-size: 60px
 }
-.smallNavbar{
+
+.smallNavbar {
     display: none;
 }
+
 @media screen and (max-width:862px) {
-    .navbar{
+    .navbar {
         display: none;
     }
-    .smallNavbar{
+
+    .smallNavbar {
         display: flex;
     }
 }

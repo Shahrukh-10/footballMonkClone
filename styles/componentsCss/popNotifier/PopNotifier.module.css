@@ -1,0 +1,61 @@
+.notification {
+    width: 100%;
+    position: absolute;
+    top: 12%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.innerNotification {
+    width: 90%;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.success {
+    width: 90%;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background: #a8ff78;
+    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
+    background: linear-gradient(to right, #78ffd6, #a8ff78);
+}
+
+.error {
+    width: 90%;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background: #8E0E00;
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+}
+
+@media screen and (max-width:572px) {
+
+    .innerNotification {
+        width: 97%;
+        font-size: small;
+    }
+
+    .innerNotification svg {
+        width: 7%;
+    }
+
+}

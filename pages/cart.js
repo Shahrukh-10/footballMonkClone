@@ -2,12 +2,15 @@ import styles from "../styles/pagesCss/Cart.module.css";
 import { useSelector } from "react-redux";
 import CartElement from "../components/cartElement/CartElement";
 import ResponiveCart from "../components/cartElement/ResponiveCart";
+import Script from "next/script";
 
 const Cart = () => {
-  const { screenWidth } = useSelector((state) => state.navbar);
+  const { totalAmountCheckout } = useSelector((state) => state.cartAmount);
+  console.log(totalAmountCheckout);
 
   return (
     <>
+      <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
       <div className={styles.cart}>
         <CartElement />
         <CartElement />
@@ -33,7 +36,7 @@ const Cart = () => {
                 <p>Subtotal</p>
               </div>
               <div>
-                <p className={styles.amount}>400</p>
+                <p className={styles.amount}>₹{totalAmountCheckout}</p>
               </div>
             </div>
             <div className={styles.totals}>
@@ -41,13 +44,13 @@ const Cart = () => {
                 <p>Total</p>
               </div>
               <div>
-                <p className={styles.amount}>400</p>
+                <p className={styles.amount}>₹{totalAmountCheckout}</p>
               </div>
             </div>
           </div>
-        <div className={styles.checkout}>
-          <button>Proceed to Checkout</button>
-        </div>
+          <div className={styles.checkout}>
+            <button>Proceed to Checkout</button>
+          </div>
         </div>
       </div>
     </>

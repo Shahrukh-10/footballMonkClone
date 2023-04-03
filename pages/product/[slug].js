@@ -18,18 +18,31 @@ import { RxCross2 } from "react-icons/rx";
 import { useState } from "react";
 
 const SlugProduct = () => {
+  const [quantity, setQuantity] = useState(1);
   const router = useRouter();
   console.log(router.query.slug);
   const [openChart, setOpenChart] = useState(false);
+  const [size, setSize] = useState()
   const [openImage, setOpenImage] = useState(false);
   const [descreption, setDescreptionOpen] = useState(true);
+  const incrementQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
   return (
     <div className={styles.product}>
       <div className={styles.productPage}>
         <div className={styles.headingSmall}>
           <h1>Argentina World Champions Graphic Hoodie</h1>
         </div>
-        <div className={openImage ? styles.imageOpen : styles.productImage} onClick={()=>setOpenImage(!openImage)}>
+        <div
+          className={openImage ? styles.imageOpen : styles.productImage}
+          onClick={() => setOpenImage(!openImage)}
+        >
           <img
             src="https://footballmonk.in/wp-content/uploads/2023/01/Argentina-World-Champions-Graphic-Hoodie-Black.jpg"
             alt="ProductImage"
@@ -37,11 +50,11 @@ const SlugProduct = () => {
           <div className={openImage ? styles.block : styles.searchBlock}>
             <BsSearch color="black" size={20} />
           </div>
-          <div className={openImage ? styles.cross : styles.block} onClick={()=>setOpenImage(false)}>
-            <RxCross2
-              size={50}
-              color="white"
-            />
+          <div
+            className={openImage ? styles.cross : styles.block}
+            onClick={() => setOpenImage(false)}
+          >
+            <RxCross2 size={50} color="white" />
           </div>
         </div>
         <div className={styles.productDescreption}>
@@ -103,17 +116,17 @@ const SlugProduct = () => {
           <div className={styles.size}>
             <h1>Size : </h1>
             <div className={styles.sizeBlock}>
-              <div className={styles.blocks}>S</div>
-              <div className={styles.blocks}>M</div>
-              <div className={styles.blocks}>L</div>
-              <div className={styles.blocks}>XL</div>
+              <div className={`${styles.blocks} ${size==="S" && styles.active}`} onClick={()=>setSize("S")}>S</div>
+              <div className={`${styles.blocks} ${size==="M" && styles.active}`} onClick={()=>setSize("M")}>M</div>
+              <div className={`${styles.blocks} ${size==="L" && styles.active}`} onClick={()=>setSize("L")}>L</div>
+              <div className={`${styles.blocks} ${size==="XL" && styles.active}`} onClick={()=>setSize("XL")}>XL</div>
             </div>
           </div>
           <div className={styles.quantity}>
             <div className={styles.quantityBlock}>
-              <div className={styles.blockDecrease}>-</div>
-              <div className={styles.blockQuantity}>1</div>
-              <div className={styles.blockIncrease}>+</div>
+              <div className={styles.blockDecrease} onClick={()=>decrementQuantity()}>-</div>
+              <div className={styles.blockQuantity}>{quantity}</div>
+              <div className={styles.blockIncrease} onClick={()=>incrementQuantity()}>+</div>
             </div>
             <div className={styles.addToCart}>
               <button>Add To Cart</button>

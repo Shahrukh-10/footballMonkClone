@@ -5,6 +5,7 @@ import { FaUser } from "react-icons/fa";
 import { RiShoppingBag2Fill } from "react-icons/ri";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
+import { TbLogout } from "react-icons/tb";
 import Image from "next/image";
 import NavMenu from "./NavMenu";
 import Search from "./Search";
@@ -17,16 +18,22 @@ import {
   SET_SCREEN_WIDTH,
 } from "../../redux_store/reducers/NavOperations";
 import Link from "next/link";
+import Logout from "../../../utils/Logout";
+import Cookies from "js-cookie";
+import { SET_INITIAL_DATA } from "../../../utils/SetInitialData";
 
 const Navbar = () => {
+  const { loggedIn } = useSelector((state) => state.userStatus);
   const { openNavigation, openSearch } = useSelector((state) => state.navbar);
-  const dispatch = useDispatch();
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 0
   );
+  const dispatch = useDispatch();
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    SET_INITIAL_DATA(Cookies, dispatch);
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
       dispatch(SET_SCREEN_WIDTH(window.innerWidth));
@@ -88,15 +95,27 @@ const Navbar = () => {
               />
             </button>
           </Link>
-          <Link href="/account">
-            <button>
-              <FaUser
-                className={`cursor-pointer ${styles.icon}`}
-                color="black"
-                size={30}
-              />
-            </button>
-          </Link>
+          {loggedIn ? (
+            <Link href="/">
+              <button onClick={() => Logout(Cookies, dispatch)}>
+                <TbLogout
+                  className={`cursor-pointer ${styles.icon}`}
+                  color="black"
+                  size={30}
+                />
+              </button>
+            </Link>
+          ) : (
+            <Link href="/account">
+              <button>
+                <FaUser
+                  className={`cursor-pointer ${styles.icon}`}
+                  color="black"
+                  size={30}
+                />
+              </button>
+            </Link>
+          )}
         </div>
       </div>
       <div>
