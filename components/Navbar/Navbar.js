@@ -20,7 +20,7 @@ import {
 import Link from "next/link";
 import Logout from "../../../utils/Logout";
 import Cookies from "js-cookie";
-import { SET_INITIAL_DATA } from "../../../utils/SetInitialData";
+import { SET_INITIAL_DATA } from "../../utils/SetInitialData";
 
 const Navbar = () => {
   const { loggedIn } = useSelector((state) => state.userStatus);
